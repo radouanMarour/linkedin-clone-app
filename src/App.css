@@ -1,0 +1,8 @@
+.app__body {
+    max-width: 85vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+}

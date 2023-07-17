@@ -1,0 +1,94 @@
+.post {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0 2px 3px rgba(0, 0, 0, .2);
+}
+
+.post__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.post__header>img {
+    width: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.post__user__name {
+    font-weight: bold;
+}
+
+.post__user__description,
+.post__user__date {
+    font-size: 0.8rem;
+    color: #5f6163;
+}
+
+.post__message {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+img.post__photo {
+    max-width: 100%;
+    margin: 1rem 0;
+    border-radius: 0.3rem;
+}
+
+.post__options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #f3f2ef;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.post__options>div {
+    flex-direction: row !important;
+    gap: 0.5rem;
+    /* font-weight: 700; */
+    color: #969696;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1.5rem !important;
+    font-weight: bold;
+}
+
+.post__options>div:hover {
+    background-color: #ebebeb;
+}
+
+.add__comment {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.add__comment>a>img {
+    width: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.add__comment>form {
+    flex-grow: 1;
+}
+
+.add__comment>form input {
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+    text-align: left;
+    border-radius: 1.5rem;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #5f6163;
+}
+
+.add__comment>input:focus {
+    outline: 1px solid #5f6163;
+}

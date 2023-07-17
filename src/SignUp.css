@@ -1,24 +1,24 @@
-.login {
+.signup {
     height: 100vh;
     position: relative;
 }
 
-.login header {
+.signup header {
     width: 100%;
 }
 
-.login header>img {
+.signup header>img {
     height: 65px;
     object-fit: cover;
     margin-left: 8rem;
 }
 
-.login form {
+.signup form {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 352px;
+    width: 420px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     padding: 2rem 1rem;
     border-radius: 8px;
@@ -29,41 +29,44 @@
     flex-direction: column;
 }
 
-.login form p,
-.login form h1 {
+.signup>p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.signup form label {
     align-self: flex-start;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.login form p {
-    margin-bottom: 1rem;
-}
-
-.login form input {
-    font-size: 1.1rem;
+.signup form input {
+    font-size: 1rem;
     line-height: 1.33333;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.9);
-    padding: 0.9rem 0.5rem;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.3rem;
+    /* margin-top: 1rem; */
     width: 100%;
     border-width: 1px;
 }
 
-.login form input:focus {
+.signup form input:focus {
     outline-color: blue;
 }
 
-.login form input[type="submit"] {
+.signup form input[type="submit"] {
     color: #fff;
     background-color: rgb(10, 102, 194);
     border-radius: 2rem;
     cursor: pointer;
     border: none;
     margin-top: 2rem;
+    padding: 0.8rem 0.5rem;
 }
 
-.login form input[type="submit"]:hover {
+.signup form input[type="submit"]:hover {
     background-color: #004182;
 }
 

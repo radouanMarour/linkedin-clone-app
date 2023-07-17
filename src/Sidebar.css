@@ -1,8 +1,10 @@
 .sidebar {
     position: sticky;
+    height: fit-content;
     top: 80px;
     flex: 0.2;
     border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 .sidebar__top {
@@ -11,7 +13,7 @@
     padding-bottom: 1rem;
     /* margin-bottom: 1rem; */
     background-color: #fff;
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0 2px 3px rgba(0, 0, 0, .2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .sidebar__top>img:first-child {
@@ -52,7 +54,7 @@
 .sidebar__bottom {
     padding: 0.7rem 0;
     background-color: #fff;
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 0px 0px 1px rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .sidebar__bottom>div {
@@ -77,7 +79,7 @@
     margin-top: 0.5rem;
     border-radius: 0.5rem;
     background-color: #fff;
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0 2px 3px rgba(0, 0, 0, .2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .groups {

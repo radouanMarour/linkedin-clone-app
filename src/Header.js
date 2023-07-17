@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css';
 import Logo from './img/linkedin.png';
 import Avatar from './img/avatar.png';
@@ -9,10 +9,16 @@ import WorkIcon from '@mui/icons-material/Work';
 import SmsRoundedIcon from '@mui/icons-material/SmsRounded';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AppsIcon from '@mui/icons-material/Apps';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import HeaderOption from './components/HeaderOption';
+import { useSelector } from 'react-redux';
+import UserOptions from './components/UserOptions';
 
 function Header() {
+    const user = useSelector(state => state.auth.user);
+    const [showModel, setShowModel] = useState(false);
+
     return (
         <div className='header'>
             <div className='header__left'>
@@ -29,11 +35,15 @@ function Header() {
                 <HeaderOption Icon={WorkIcon} title="Jobs" />
                 <HeaderOption Icon={SmsRoundedIcon} title="Messaging" url="#" />
                 <HeaderOption Icon={NotificationsIcon} title="Notifications" url="#" />
-                <div className='user'>
+                <div className='user' onClick={() => setShowModel(p => !p)}>
                     {/* <img src="" alt="" /> */}
                     <img src={Avatar} alt="" />
-                    <p>Me</p>
+                    <p>
+                        <span>Me</span>
+                        <ArrowDropDownIcon />
+                    </p>
                 </div>
+                {showModel && <UserOptions />}
                 <HeaderOption Icon={AppsIcon} title="For Business" />
             </div>
         </div>

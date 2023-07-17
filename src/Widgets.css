@@ -5,6 +5,11 @@
     flex-direction: column;
     align-items: flex-start;
     flex: 0.3;
+    position: sticky;
+    height: fit-content;
+    top: 80px;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .widgets h3 {

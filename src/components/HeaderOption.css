@@ -10,7 +10,7 @@
     cursor: pointer;
 }
 
-div.header__option:hover {
+.header__option:hover {
     background-color: #ebebeb;
 }
 

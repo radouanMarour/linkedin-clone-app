@@ -8,7 +8,7 @@ import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
 import RepeatOutlinedIcon from '@mui/icons-material/RepeatOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 
-function Post() {
+function Post(data) {
     const [showCommentInput, setShowCommentInput] = useState(false);
     const addComment = () => setShowCommentInput(prev => !prev);
     return (

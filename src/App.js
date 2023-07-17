@@ -1,19 +1,21 @@
+import { Routes, Route } from 'react-router-dom'
 import './App.css';
-import Feed from './Feed';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Widgets from './Widgets';
+import Login from './Login';
+import SignUp from './SignUp';
+import Home from './Home';
+import ErrorPage from './ErrorPage';
+import Profile from './Profile';
 
 function App() {
   return (
     <div className="app">
-      {/* Header */}
-      <Header />
-      <div className='app__body'>
-        <Sidebar />
-        <Feed />
-        <Widgets />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
     </div>
   );
 }

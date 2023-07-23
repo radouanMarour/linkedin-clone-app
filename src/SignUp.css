@@ -18,7 +18,8 @@
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 420px;
+    width: 90%;
+    max-width: 420px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     padding: 2rem 1rem;
     border-radius: 8px;

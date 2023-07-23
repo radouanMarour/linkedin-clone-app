@@ -1,0 +1,65 @@
+.edit__photo {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.edit__photo .edit {
+    background-color: #1d2226;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.edit__photo .close__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.edit__photo .close__icon:hover {
+    background-color: #111111;
+}
+
+.edit__photo .edit img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: none;
+    box-shadow: 0 0 5px 0 #000000;
+    margin: 0 auto;
+}
+
+.edit__photo .edit p {
+    color: #ffffff;
+}
+
+.edit__photo .edit form {
+    background-color: inherit;
+    width: initial;
+    height: initial;
+}
+
+.edit__photo .edit form button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}

@@ -21,7 +21,8 @@
     border-radius: 50%;
 }
 
-.user__options button {
+.user__options a {
+    display: block;
     width: 100%;
     padding: 0.3rem 1.5rem;
     margin-top: 0.5rem;
@@ -34,12 +35,13 @@
     font-weight: 700;
 }
 
-.user__options button a {
+.user__options a {
     text-decoration: none;
-    border: none;
+    width: 100%;
+    height: 100%;
 }
 
-.user__options button:hover {
+.user__options a:hover {
     background-color: #ebebeb;
 }
 

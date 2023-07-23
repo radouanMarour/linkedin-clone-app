@@ -4,16 +4,19 @@ import LinkedinLogo from './img/Linkedin-Logo.png';
 import { Link } from 'react-router-dom';
 import { signUp } from './authService';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [fname, setFname] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const dispatch = useDispatch();
 
     const handleSubmit = e => {
         e.preventDefault();
         dispatch(signUp(fname, email, password));
+        navigate("/login");
     }
 
     return (

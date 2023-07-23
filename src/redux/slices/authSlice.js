@@ -1,9 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { clearData, getData, setData } from '../../locatStorage';
 
-const initialState = {
-    user: null,
-    error: null
-}
+const initialState = getData();
 
 const authSlice = createSlice({
     name: "auth",
@@ -12,15 +10,18 @@ const authSlice = createSlice({
         setUser: (state, action) => {
             state.user = action.payload;
             state.error = null;
+            setData(state);
         },
         setError: (state, action) => {
             state.user = null;
             state.error = action.payload
+            setData(state);
         },
         clearUser: (state, action) => {
             state.user = null;
             state.error = null;
-        }
+            setData(state)
+        },
     }
 })
 

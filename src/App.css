@@ -1,8 +1,15 @@
 .app__body {
-    max-width: 85vw;
+    max-width: 85%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     padding: 1.5rem 0;
+    background-color: #f3f2ef;
+}
+
+@media only screen and (max-width:768px) {
+    .app__body {
+        flex-direction: column;
+    }
 }

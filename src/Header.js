@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import './Header.css';
 import Logo from './img/linkedin.png';
 import Avatar from './img/avatar.png';
@@ -10,44 +10,51 @@ import SmsRoundedIcon from '@mui/icons-material/SmsRounded';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AppsIcon from '@mui/icons-material/Apps';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import HeaderOption from './components/HeaderOption';
 import { useSelector } from 'react-redux';
 import UserOptions from './components/UserOptions';
+import { auth } from './firebase';
 
 function Header() {
-    const user = useSelector(state => state.auth.user);
+    // Get user information from Redux store
+    const user = useSelector((state) => state.auth.user);
+
+    // State to control the display of the user options model
     const [showModel, setShowModel] = useState(false);
 
     return (
         <div className='header'>
+            {/* Header Left */}
             <div className='header__left'>
-                <img src={Logo} alt="" />
-
-                <div className='header__search'>
+                <img src={Logo} alt='LinkedIn Logo' />
+                <div className='header__search' tabIndex={1}>
                     <SearchOutlinedIcon />
-                    <input type='text' />
+                    <input type='text' placeholder='Search' />
                 </div>
             </div>
+
+            {/* Header Right */}
             <div className='header__right'>
-                <HeaderOption Icon={HomeIcon} title="Home" active={true} url="#" />
-                <HeaderOption Icon={PeopleIcon} title="My Network" url="#" />
-                <HeaderOption Icon={WorkIcon} title="Jobs" />
-                <HeaderOption Icon={SmsRoundedIcon} title="Messaging" url="#" />
-                <HeaderOption Icon={NotificationsIcon} title="Notifications" url="#" />
-                <div className='user' onClick={() => setShowModel(p => !p)}>
-                    {/* <img src="" alt="" /> */}
-                    <img src={Avatar} alt="" />
+                <HeaderOption Icon={HomeIcon} title='Home' active={true} url='/' />
+                <HeaderOption Icon={PeopleIcon} title='My Network' url='#' />
+                <HeaderOption Icon={WorkIcon} title='Jobs' />
+                <HeaderOption Icon={SmsRoundedIcon} title='Messaging' url='#' />
+                <HeaderOption Icon={NotificationsIcon} title='Notifications' url='#' />
+
+                {/* User Profile Section */}
+                <div className='user' onClick={() => setShowModel((prev) => !prev)}>
+                    <img src={user?.photoUrl ? user.photoUrl : Avatar} alt='User Profile' />
                     <p>
                         <span>Me</span>
                         <ArrowDropDownIcon />
                     </p>
                 </div>
                 {showModel && <UserOptions />}
-                <HeaderOption Icon={AppsIcon} title="For Business" />
+
+                <HeaderOption Icon={AppsIcon} title='For Business' />
             </div>
         </div>
-    )
+    );
 }
 
-export default Header
+export default Header;

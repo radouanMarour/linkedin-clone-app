@@ -4,12 +4,18 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex: 0.3;
+    flex: 0 0 300px;
     position: sticky;
     height: fit-content;
     top: 80px;
     padding: 1rem 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width:990px) {
+    .widgets {
+        display: none;
+    }
 }
 
 .widgets h3 {

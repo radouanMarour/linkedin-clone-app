@@ -4,8 +4,11 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import './Sidebar.css'
 import Bg from './img/bg.png';
 import Avatar from './img/avatar.png';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
+    const user = useSelector(state => state.auth.user);
 
     const recentItem = (item) => (<div className="groups">
         <GroupsIcon /> <p>{item}</p>
@@ -13,12 +16,14 @@ function Sidebar() {
 
     return (
         <div className='sidebar'>
-            <div className='sidebar__top'>
-                <img src={Bg} alt="" />
-                <div className='avatar'><img src={Avatar} alt="" /></div>
-                <p className='user__name'>radouan Marour</p>
-                <p className='user__title'>Fullstack web developer</p>
-            </div>
+            <Link to="profile">
+                <div className='sidebar__top'>
+                    <img src={Bg} alt="" />
+                    <div className='avatar'><img src={user?.photoUrl ? user?.photoUrl : Avatar} alt="" /></div>
+                    <p className='user__name'>{user?.name}</p>
+                    <p className='user__title'>{user?.headline}</p>
+                </div>
+            </Link>
             <div className='sidebar__bottom'>
                 <div>
                     <p>Connections<br /><strong>Grow your network</strong></p>

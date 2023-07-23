@@ -1,13 +1,14 @@
 import React from 'react'
 import './HeaderOption.css';
+import { Link } from 'react-router-dom';
 
 function HeaderOption({ Icon, title, active, color, url, callback }) {
     if (url) {
         return (
-            <a className={`header__option ${active && 'active'}`} href={url}>
+            <Link className={`header__option ${active && 'active'}`} to={url}>
                 <Icon style={{ color: color }} />
                 <p>{title}</p>
-            </a>
+            </Link>
         )
     }
 

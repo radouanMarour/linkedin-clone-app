@@ -1,11 +1,16 @@
 .profile {
-    max-width: 60%;
+    width: 90%;
+    max-width: 700px;
     margin: 0 auto;
     margin-top: 1.5rem;
     border-radius: 0.5rem;
     overflow: hidden;
     padding-bottom: 1rem;
 }
+
+/* @media screen and (max-width:768){
+    .profile:
+} */
 
 .profile__top {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

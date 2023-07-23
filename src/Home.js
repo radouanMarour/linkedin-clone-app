@@ -3,11 +3,14 @@ import Sidebar from './Sidebar'
 import Feed from './Feed'
 import Widgets from './Widgets'
 import Header from './Header';
-import { auth } from './firebase';
-import { useSelector } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import Loading from './components/Loading';
 
-function Home() {
+function Home({ loading }) {
+
+    if (loading) {
+        return <Loading />
+    }
+
     return (
         <>
             <Header />

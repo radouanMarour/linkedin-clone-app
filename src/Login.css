@@ -38,6 +38,12 @@
     margin-bottom: 1rem;
 }
 
+.login form p.error__message {
+    margin-bottom: 0;
+    align-self: center;
+    color: red;
+}
+
 .login form input {
     font-size: 1.1rem;
     line-height: 1.33333;

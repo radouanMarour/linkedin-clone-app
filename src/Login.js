@@ -2,19 +2,25 @@ import React, { useState } from 'react';
 import './Login.css';
 import LinkedinLogo from './img/Linkedin-Logo.png';
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { login } from './authService';
+import { auth } from './firebase';
+// import { clearUser } from './redux/slices/authSlice';
 
 function Login() {
+    const navigate = useNavigate();
     // State to manage email and password inputs
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const error = useSelector(state => state.auth.error);
+
     // Create dispatcher to trigger the login action
     const dispatch = useDispatch();
 
-    // Use the useNavigate hook to programmatically navigate to other routes
-    const navigate = useNavigate();
+    if (auth.currentUser) {
+        navigate("/");
+    }
 
     // Function to handle form submission
     const handleSubmit = (e) => {
@@ -37,6 +43,7 @@ function Login() {
             <form onSubmit={handleSubmit}>
                 <h1>Sign in</h1>
                 <p>Stay updated on your professional world</p>
+                <p className='error__message'>{error ? error : ""}</p>
                 <input
                     type='text'
                     name='email'

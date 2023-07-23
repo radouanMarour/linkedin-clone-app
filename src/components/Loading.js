@@ -6,7 +6,7 @@ function Loading() {
     return (
         <div className='loading'>
             <img src={Logo} alt="" />
-            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         </div>
     )
 }

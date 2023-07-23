@@ -6,31 +6,30 @@ import Home from './Home';
 import ErrorPage from './ErrorPage';
 import Profile from './Profile';
 import PrivateRoute from './PrivateRoute';
-import { useSelector } from 'react-redux';
 import { auth } from './firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 import { useEffect, useState } from 'react';
-import Loading from './components/Loading';
 
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setUser(user)
-      setLoading(false)
-    })
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user)
+        setLoading(false)
+      } else {
+        setLoading(true)
+      }
+    });
     return () => unsubscribe();
   }, [])
-
-  if (loading) {
-    return <Loading />
-  }
 
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<PrivateRoute user={user}><Home /></PrivateRoute>} />
+        <Route path="/" element={<PrivateRoute user={user}><Home loading={loading} /></PrivateRoute>} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />

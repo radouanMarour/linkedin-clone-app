@@ -1,0 +1,148 @@
+.post {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.7rem 0;
+    margin: 0.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.post__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.post__header>img {
+    width: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.post__user__name {
+    font-weight: bold;
+}
+
+.post__user__description,
+.post__user__date {
+    font-size: 0.8rem;
+    color: #5f6163;
+}
+
+.post__user__createdAt {
+    font-size: 0.8rem;
+}
+
+.post__message {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+img.post__photo {
+    max-width: 100%;
+    /* height: 300px; */
+    object-fit: cover;
+    margin: 1rem 0;
+}
+
+.post__options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #f3f2ef;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.post__options>div {
+    flex-direction: row !important;
+    gap: 0.5rem;
+    /* font-weight: 700; */
+    color: #969696;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1.5rem !important;
+    font-weight: bold;
+}
+
+.post__options>div:hover {
+    background-color: #ebebeb;
+}
+
+.add__comment {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.add__comment>a>img {
+    width: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.add__comment>form {
+    flex-grow: 1;
+}
+
+.add__comment>form input {
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+    text-align: left;
+    border-radius: 1.5rem;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #5f6163;
+}
+
+.add__comment>input:focus {
+    outline: 1px solid #5f6163;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.stats .likes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5f6163;
+    font-weight: 700;
+    margin: 0.3rem;
+    color: rgb(0, 56, 139);
+
+}
+
+.stats .likes svg {
+    color: rgb(0, 56, 139);
+    margin-left: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.add__comment form input[type="submit"] {
+    color: #fff;
+    background-color: rgb(10, 102, 194);
+    border-radius: 2rem;
+    cursor: pointer;
+    border: none;
+    margin-top: 1rem;
+    /* padding: 0.8rem 0.5rem; */
+    width: 50px;
+
+    /* position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    width: 100px; */
+}
+
+.add__comment form input[type="submit"]:hover {
+    background-color: #004182;
+}

@@ -1,0 +1,30 @@
+.comment {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    margin-right: 0.5rem;
+}
+
+.comment>img {
+    width: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.comment .user__info {
+    background-color: #f2f2f2;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    flex: 1;
+}
+
+.comment .user__name,
+.comment .user__desc {
+    font-size: 0.8rem;
+}
+
+.comment .user__desc+p {
+    margin-top: 0.5rem;
+}

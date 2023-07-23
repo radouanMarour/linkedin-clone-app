@@ -1,0 +1,155 @@
+.create__post {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.create {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 50%;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #5e5e5e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.close__icon:hover {
+    background-color: #ebebeb;
+}
+
+.create form {
+    width: 100%;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.create form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f3f2ef;
+    position: relative;
+}
+
+.create form label:hover {
+    box-shadow: 0 3px 5px 0 #5e5e5e;
+}
+
+.create form label svg {
+    color: #666666;
+}
+
+.create form label p {
+    position: absolute;
+    top: -110%;
+    left: -2rem;
+    width: 150px;
+    border-radius: 0.7rem;
+    box-shadow: 0 3px 5px 0 #5e5e5e;
+    padding: 1rem;
+    display: none;
+
+}
+
+.create form label:hover p {
+    display: block;
+}
+
+.create form textarea {
+    font-size: 1.5rem;
+    line-height: 1.33333;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.9);
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.3rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+.create form input[type="submit"] {
+    color: #fff;
+    background-color: rgb(10, 102, 194);
+    border-radius: 2rem;
+    cursor: pointer;
+    border: none;
+    margin-top: 2rem;
+    padding: 0.8rem 0.5rem;
+
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    width: 100px;
+}
+
+.create form input[type="submit"]:hover {
+    background-color: #004182;
+}
+
+.create form input:disabled {
+    background-color: #666666;
+}
+
+.create form input:disabled:hover {
+    background-color: #666666;
+}
+
+.create form img {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.user__options__info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 300px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.user__options__info:hover {
+    background-color: #ebebeb;
+    border-radius: 0.7rem;
+}
+
+.user__options__info>img {
+    width: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+}
